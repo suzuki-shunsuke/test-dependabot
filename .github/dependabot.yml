@@ -5,3 +5,11 @@ updates:
   directory: "/"
   schedule:
     interval: "daily"
+- package-ecosystem: "docker"
+  directory: "/foo"
+  schedule:
+    interval: "daily"
+- package-ecosystem: "docker"
+  directory: "/bar"
+  schedule:
+    interval: "daily"
