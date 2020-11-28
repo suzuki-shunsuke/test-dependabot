@@ -13,3 +13,7 @@ updates:
   directory: "/bar"
   schedule:
     interval: "daily"
+- package-ecosystem: "docker"
+  directory: "/.circleci"
+  schedule:
+    interval: "daily"
