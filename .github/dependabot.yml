@@ -1,19 +1,11 @@
----
 version: 2
 updates:
-- package-ecosystem: "docker"
-  directory: "/"
-  schedule:
-    interval: "daily"
-- package-ecosystem: "docker"
-  directory: "/foo"
-  schedule:
-    interval: "daily"
-- package-ecosystem: "docker"
-  directory: "/bar"
-  schedule:
-    interval: "daily"
-- package-ecosystem: "docker"
-  directory: "/.circleci"
-  schedule:
-    interval: "daily"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    target-branch: "main"
+    schedule:
+      interval: "daily"
+    # ignore:
+    #   - dependency-name: "softprops/action-gh-release"
+    #     # https://github.com/softprops/action-gh-release/issues/556
+    #     versions: ["2.2.0"]
